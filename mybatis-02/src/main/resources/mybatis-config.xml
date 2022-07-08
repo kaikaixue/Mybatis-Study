@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--核心配置文件-->
+<configuration>
+<!--    引入外部配置文件-->
+    <properties resource="db.properties">
+<!--        如果 name 与外部一样， 优先使用外部 内部会被覆盖-->
+<!--        <property name="username" value="root"/>-->
+    </properties>
+
+<!--    起别名， 防止代码冗余 -->
+    <typeAliases>
+<!--        可以为包加，mapper中直接使用 类名（首字母小写）-->
+        <package name="com.xkk.pojo"/>
+<!--        给类加-->
+<!--        <typeAlias type="com.xkk.pojo.User" alias=""></typeAlias>-->
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+<!--   每一个Mapper.xml 都需要在 Mybatis 核心配置文件中注册 -->
+    <mappers>
+        <mapper resource="com/xkk/dao/UserMapper.xml"/>
+    </mappers>
+</configuration>

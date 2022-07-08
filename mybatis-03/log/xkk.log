@@ -1,0 +1,9 @@
+ãINFOãã22-07-08ããcom.xkk.dao.UserMapperTestãinfo:进入了testLog4j
+ãDEBUGãã22-07-08ããcom.xkk.dao.UserMapperTestãdebug:进入了testLog4j
+ãERRORãã22-07-08ããcom.xkk.dao.UserMapperTestãerror:进入了testLog4j
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+ãDEBUGãã22-07-08ããorg.apache.ibatis.logging.LogFactoryãLogging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.

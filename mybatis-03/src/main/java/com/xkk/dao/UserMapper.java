@@ -3,6 +3,7 @@ package com.xkk.dao;
 import com.xkk.pojo.User;
 
 import java.util.List;
+import java.util.Map;
 
 public interface UserMapper {
     /**
@@ -16,7 +17,7 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    User getUserById(Integer id);
+     User getUserById(Integer id);
 
     /**
      * 插入用户
@@ -39,5 +40,19 @@ public interface UserMapper {
      */
     int delUser(Integer id);
 
+    /**
+     * 模糊查询
+     * @param value
+     * @return
+     */
     List<User> getUserLike(String value);
+
+    /**
+     * 分页
+     * @param map
+     * @return
+     */
+    List<User> getUserLimit(Map<String, Object> map);
+
+    List<User> getUserLimitByRowBounds();
 }

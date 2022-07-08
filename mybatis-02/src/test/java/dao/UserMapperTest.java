@@ -1,9 +1,10 @@
-package com.xkk.dao;
+package dao;
 
-import com.xkk.pojo.User;
-import com.xkk.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
+import com.xkk.dao.UserMapper;
+import com.xkk.pojo.User;
+import com.xkk.utils.MybatisUtils;
 
 import java.util.List;
 

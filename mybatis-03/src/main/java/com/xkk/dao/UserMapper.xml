@@ -20,12 +20,25 @@
     <select id="getUserList" resultType="com.xkk.pojo.User">
         select * from t_user;
     </select>
-    <select id="getUserById" resultType="com.xkk.pojo.User" parameterType="integer">
+
+    <resultMap id="UserMap" type="User">
+        <result column="pwd" property="password"/>
+    </resultMap>
+
+    <select id="getUserById" resultMap="UserMap" parameterType="integer">
         select * from t_user where id = #{id}
     </select>
 
     <select id="getUserLike" resultType="com.xkk.pojo.User">
         select *
         from t_user where name like concat('%', #{name}, '%')
+    </select>
+
+    <select id="getUserLimit" resultType="com.xkk.pojo.User" parameterType="map">
+        select * from t_user limit #{start}, #{size}
+    </select>
+    <select id="getUserLimitByRowBounds" resultType="com.xkk.pojo.User">
+        select *
+        from t_user;
     </select>
 </mapper>

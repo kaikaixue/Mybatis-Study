@@ -20,7 +20,7 @@
     <select id="getUserList" resultType="com.xkk.pojo.User">
         select * from t_user;
     </select>
-    <select id="getUserById" resultType="com.xkk.pojo.User" parameterType="integer">
+    <select id="getUserById" resultType="hello" parameterType="integer">
         select * from t_user where id = #{id}
     </select>
 
