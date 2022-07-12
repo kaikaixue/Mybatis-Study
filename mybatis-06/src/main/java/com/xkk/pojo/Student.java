@@ -2,11 +2,9 @@ package com.xkk.pojo;
 
 import lombok.Data;
 
-import java.util.List;
-
 @Data
-public class Teacher {
+public class Student {
     private Integer id;
     private String name;
-    private List<Student> students;
+    private Teacher teacher;
 }
