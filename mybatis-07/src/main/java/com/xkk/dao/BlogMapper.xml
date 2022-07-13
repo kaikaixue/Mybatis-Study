@@ -6,4 +6,52 @@
     <insert id="addBlog" parameterType="blog">
         insert into blog values (#{id}, #{title}, #{author}, #{createTime}, #{views})
     </insert>
+
+    <update id="updateBlog" parameterType="map">
+        update blog
+        <set>
+            <if test="title != null">title = #{title},</if>
+            <if test="author != null">author = #{author},</if>
+            <if test="views != null">views = #{views}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="queryBlogIF" resultType="blog" parameterType="map">
+        select * from blog
+        <where>
+            <if test="title != null">
+                and title = #{title}
+            </if>
+            <if test="author != null">
+                and author = #{author}
+            </if>
+        </where>
+    </select>
+
+    <select id="queryBlogChoose" resultType="com.xkk.pojo.Blog" parameterType="map">
+        select * from blog
+        <where>
+            <choose>
+                <when test="title != null">
+                    title = #{title}
+                </when>
+                <when test="author != null">
+                    author = #{author}
+                </when>
+                <otherwise>
+                    view = #{view}
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <select id="queryBlogForeach" resultType="com.xkk.pojo.Blog" parameterType="map">
+        select * from blog
+        <where>
+            <foreach collection="ids" item="id" open="and (" close=")" separator="or">
+                id = #{id}
+            </foreach>
+        </where>
+    </select>
 </mapper>
